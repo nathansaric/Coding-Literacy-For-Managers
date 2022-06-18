@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>PROXimity Map</title>
+  </head>
+
+  <body>
+    <main>
+      <img src="IMAGES/GroceryMap.png" alt="GroceryMap" usemap="#grocerymap" />
+
+      <!-- Creating the image map -->
+      <map name="grocerymap" id="grocery_map">
+        <area
+          title="Bakery"
+          class="beacon-area"
+          id="bakery"
+          alt="Bakery"
+          shape="poly"
+          coords="733,531,865,532,865,591,881,592,882,659,732,657"
+        />
+        <area
+          title="Dairy"
+          class="beacon-area"
+          id="dairy"
+          alt="Dairy"
+          shape="poly"
+          coords="137,75,359,75,359,91,301,90,156,229,137,229"
+        />
+        <area
+          title="Deli"
+          class="beacon-area"
+          id="deli"
+          alt="Deli"
+          shape="poly"
+          coords="711,340,862,343,863,421,916,470,918,537,882,586,868,586,870,527,712,525"
+        />
+        <area
+          title="Grocery"
+          class="beacon-area"
+          id="grocery"
+          alt="Grocery"
+          shape="poly"
+          coords="243,209,356,209,356,455,337,487,192,488,192,256"
+        />
+        <area
+          title="Produce"
+          class="beacon-area"
+          id="produce"
+          alt="Produce"
+          shape="rect"
+          coords="367,75,697,313"
+        />
+      </map>
+
+      <!-- Creating Return Arrow -->
+      <div id="backArrow" class="returnArrow">
+        <a href="main.html"> &lAarr; </a>
+      </div>
+
+      <!-- Creating Popup Box -->
+      <div id="adPopup" class="popup">
+        <span class="close"> &times; </span>
+        <div class="popup-content"></div>
+      </div>
+    </main>
+    <script src="scripts.js"></script>
+    <script>
+      getUserPreferences();
+
+      const map = document.getElementById("grocery_map");
+      map.onclick = function (event) {
+        if (event.target.className === "beacon-area") {
+          populatePopup(event.target.id);
+        }
+      };
+    </script>
+  </body>
+</html>

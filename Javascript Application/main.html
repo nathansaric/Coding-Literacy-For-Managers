@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>PROXimity Home</title>
+  </head>
+
+  <body>
+    <img src="IMAGES/iPad.png" class="iPad" />
+    <img src="IMAGES/Logo.png" width="700" height="100" class="logo">
+    <div class="textblock">
+      <p style="border:1px solid rgb(100, 59, 59);" class="h1">
+        Welcome! We are here to help you find the best deals on groceries today 
+        given your shopping preferences. Please select your preferences below and 
+        then click "Proceed."<br> <br> If you are looking for Test Mode please 
+        click the "Test Mode" button to be redirected to the appropriate page.</p>
+
+    <!-- Creating the user preferences list -->
+      <div class="userform">
+      <h2 class="h2">Preferences</h2> 
+      <label class="container"
+        >Organic
+        <input id="organic" type="checkbox" />
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="container"
+        >Vegetarian
+        <input id="vegetarian" type="checkbox" />
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="container"
+        >House Brand
+        <input id="houseBrand" type="checkbox" />
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="container"
+        >All Sales
+        <input id="allSales" type="checkbox" />
+        <span class="checkmark"></span>
+      </label>
+      
+      <!-- Creating the Proceed and Test Mode buttons -->
+      <a class="button" onclick="validatePreferences()">Proceed</a>
+      <a class="button" href="testmode.html">Test Mode</a>
+
+      <script src="scripts.js"></script>
+    </div>
+    
+    <img src="IMAGES/Fruit.png" class="fruit">
+  </body>
+</html>

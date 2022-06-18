@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="testmode-styles.css" />
+    <title>PROXimity Test</title>
+  </head>
+
+  <body>
+    <img src="IMAGES/Logo.png" width="1000" height="140" class="center" />
+    <br />
+    <div class="container">
+      <img src="IMAGES/iPad.png" class="iPad" />
+      <div class="textblock">
+        <h1 style="border: 2px solid Black">
+          Welcome to TestMode. Please upload your .csv file below and click
+          "Submit" to see your desired output.
+        </h1>
+        <br />
+        <h2>File Upload</h2>
+        <br />
+        <form action="/action_page.php" class="format">
+          <label for="myfile">Select a file:</label>
+          <input type="file" id="myfile" name="myfile" /><br /><br />
+          <input
+            type="submit"
+            onClick="thirdFunction();return false"
+            value="Submit"
+          />
+        </form>
+        <br />
+        <br />
+        <div>
+          <p id="errorMsg"></p>
+        </div>
+
+        <br />
+        <div>
+          <br />
+          <h4>Number of Lines Read</h4>
+          <table class="td1">
+            <th># Lines</th>
+            <td id="linesRead"></td>
+          </table>
+        </div>
+
+        <h3>Number of Ads Delivered</h3>
+        <table class="td2">
+          <tr>
+            <th>Organic</th>
+            <td></td>
+            <td id="orgAds"></td>
+          </tr>
+
+          <tr>
+            <th>Vegetarian</th>
+            <td></td>
+            <td id="vegAds"></td>
+          </tr>
+
+          <tr>
+            <th>House Brand</th>
+            <td></td>
+            <td id="houseAds"></td>
+          </tr>
+        </table>
+        <script src="testmode.js"></script>
+      </div>
+    </div>
+
+    <!-- Creating Return Arrow -->
+    <div id="backArrow" class="returnArrow">
+      <a href="main.html"> &lAarr; </a>
+    </div>
+  </body>
+</html>

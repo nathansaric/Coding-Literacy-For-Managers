@@ -1,0 +1,181 @@
+main {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+area:hover {
+  cursor: pointer;
+}
+
+/* Customization for popup elements */
+.popup {
+  display: none;
+  border: solid 8px black;
+  border-radius: 15px;
+  position: absolute;
+  left: 175px;
+  z-index: 1;
+  height: 375px;
+  width: 680px;
+  max-height: 375px;
+  max-width: 680px;
+  padding: 20px;
+  background-color: rgb(94, 86, 86);
+  font-weight: 100;
+  font-size: 14px;
+  overflow: auto;
+}
+
+/* Customization for close button */
+.close {
+  position: fixed;
+  top: 180px;
+  left: 820px;
+  color: dimgray;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Customization for user form */
+.userform {
+  position: absolute;
+  left: 400px;
+  top: 340px;
+  float: left;
+}
+
+/* Customization for iPad image */
+.iPad {
+  display: block;
+  margin-left: 160px;
+  margin-right: 160px;
+  width: 1100px;
+  height: 700px;
+}
+
+/* Customization for Fruit image */
+.fruit {
+  position: absolute;
+  top: 360px;
+  left: 700px;
+  height: 253px;
+  width: 350px;
+}
+
+/* Customization for logo */
+.logo {
+  position: absolute;
+  left: 350px;
+  top: 100px;
+}
+
+/* Customization for heading */
+.h1 {
+  position: absolute;
+  left: 400px;
+  top: 200px;
+  max-width: 650px;
+  text-align: center;
+}
+
+/* Customization for buttons */
+.button {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Customization for return arrow */
+.returnArrow {
+  position: absolute;
+  top: 90px;
+  left: 890px;
+  color: dimgray;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* Customization for the popup box */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hiding the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Creating a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a green background */
+.container input:checked ~ .checkmark {
+  background-color: limegreen;
+}
+
+/* Create the checkmark (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
